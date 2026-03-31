@@ -22,7 +22,7 @@ class ImageProvider {
 
     func loadImageData(_ urlString: String, completion: @escaping ((Data) -> Void)) {
 
-        guard let url = URL(string: baseUrl + urlString) else { return completion(Data())  }
+        guard let url = URL(string: urlString) else { return completion(Data())  }
 
         let urlRequest = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: Configuration.networkTimeout)
 

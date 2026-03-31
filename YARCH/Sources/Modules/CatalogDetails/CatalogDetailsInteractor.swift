@@ -73,7 +73,7 @@ class CatalogDetailsInteractor: CatalogDetailsBusinessLogic {
         let url: URL?
         switch externalLinkType {
         case .website:
-            url = coinModel.website.extractURLs().first
+            url = coinModel.website?.extractURLs().first
         case .twitter:
             url = URL(string: "\(Configuration.twitterBaseUrlString)\(coinModel.twitter)")
         }

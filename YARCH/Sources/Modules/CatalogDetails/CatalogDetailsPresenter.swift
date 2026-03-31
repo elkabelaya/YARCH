@@ -48,13 +48,12 @@ class CatalogDetailsPresenter: CatalogDetailsPresentationLogic {
         let image = UIImage(data: imageData ?? Data())
         let websiteAnnotationMessage = "Click here to open URL"
         let website = CoinSnapshotPropertyViewModel(type: .website, value: websiteAnnotationMessage)
-        let twitter = CoinSnapshotPropertyViewModel(type: .twitter, value: model.twitter)
+        let twitter = CoinSnapshotPropertyViewModel(type: .twitter, value: model.twitter?.url)
         var percentMined: CoinSnapshotPropertyViewModel?
-        if let totalSupply = Double(model.totalSupply) {
-            let mined = model.totalMined / totalSupply
-            let percent = numberFormatterWorker.getPercentIntegerPart(mined)
-            percentMined = CoinSnapshotPropertyViewModel(type: .percentMined, value: percent)
-        }
+        let mined = model.totalMined / model.totalSupply
+        let percent = numberFormatterWorker.getPercentIntegerPart(mined)
+        percentMined = CoinSnapshotPropertyViewModel(type: .percentMined, value: percent)
+
         let blockReward = CoinSnapshotPropertyViewModel(type: .blockReward, value: String(model.blockReward))
         let properties = [website, twitter, percentMined, blockReward].compactMap { $0 }
         return CoinSnapshotFullViewModel(uid: model.uid, title: title, image: image, properties: properties)

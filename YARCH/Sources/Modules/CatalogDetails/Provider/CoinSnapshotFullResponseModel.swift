@@ -2,13 +2,21 @@
 
 import Foundation
 
+struct TwitterModel: Decodable {
+    let url: String
+
+    private enum CodingKeys: String, CodingKey {
+        case url = "URL"
+    }
+}
+
 struct CoinSnapshotFullModel: Decodable, UniqueIdentifiable {
     let uid: String
     let title: String
     let imageUrlString: String
-    let website: String
-    let twitter: String
-    let totalSupply: String
+    let website: String?
+    let twitter: TwitterModel?
+    let totalSupply: Double
     let totalMined: Double
     let blockReward: Double
 
