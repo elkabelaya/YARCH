@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA53B4DEA515772B1461B36 /* Pods_YARCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8193C020209584006731F4 /* Pods_YARCH.framework */; };
 		1D24CB1E46D42C9F67A40895 /* CatalogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46655D2C27A987757976E87 /* CatalogProvider.swift */; };
 		2C1B2BEE2013582100AE41B3 /* NumberFormatterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B2BED2013582100AE41B3 /* NumberFormatterWorker.swift */; };
 		2C1B2BF02013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B2BEF2013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift */; };
@@ -90,13 +91,14 @@
 		457D6E031FCB242800E3AD5C /* CatalogErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6E011FCB242800E3AD5C /* CatalogErrorView.swift */; };
 		4EE8CDEC894A89FE219646AD /* CatalogDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A8984F7C517A6686D99E /* CatalogDataFlow.swift */; };
 		592394107D6B55CF87D0E9EB /* CatalogDetailsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E32A9A254C749BCBE1E22F /* CatalogDetailsDataStore.swift */; };
-		6893162C5200E6FD6B251C52 /* Pods_YARCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025FA1019BB9B53110EDC7BF /* Pods_YARCH.framework */; };
 		6BF1DC0142F0FFCFD56BA42F /* CatalogViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */; };
 		70AF80A11FE8E17700BDFEF6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AF80A01FE8E17700BDFEF6 /* Result.swift */; };
 		72147674C4AA7678398460C2 /* Pods_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F5D8A8B1540D0D29696823 /* Pods_TV.framework */; };
 		77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB09649E354CDAFB5F3165 /* CatalogDataStore.swift */; };
 		89FFCF173102FE39D6C0242A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */; };
 		8E5C4519870E9A982A356344 /* CatalogDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A54B644D7DDC7A4256EC3 /* CatalogDetailsProvider.swift */; };
+		8F62A57C2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */; };
+		8F62A57D2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */; };
 		9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */; };
 		9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0E9671DF46475CB33ABE8B /* CatalogProviderTests.swift */; };
 		A61E964033266AB0AF8E4377 /* CatalogBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */; };
@@ -169,7 +171,6 @@
 		DD939B21474EC0A81D22DF0A /* CatalogDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59058E675168738F012FCF74 /* CatalogDetailsInteractor.swift */; };
 		E05F8E239F776786CA6E8618 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C76F952B12B6FBE208E7F9 /* CatalogPresenter.swift */; };
 		E41E0C4DFE9F0E3D2A7A424C /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A651FE09B0E7C0A407443 /* CatalogViewController.swift */; };
-		ED077D3106E645289E6FF759 /* Pods_YARCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8193C020209584006731F4 /* Pods_YARCH.framework */; };
 		FF306F420E4E1342CEA3D128 /* CatalogDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678038EB002D2E44B9FAF6D6 /* CatalogDetailsBuilder.swift */; };
 /* End PBXBuildFile section */
 
@@ -288,6 +289,7 @@
 		79F5D8A8B1540D0D29696823 /* Pods_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C700EB058F36B609DB718B /* CatalogDetailsProviderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsProviderTests.swift; sourceTree = "<group>"; };
 		8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogBuilderTests.swift; sourceTree = "<group>"; };
+		8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogViewControllerTests.swift; sourceTree = "<group>"; };
 		A1D5BC19BA8CE1770E3E2F59 /* CatalogDetailsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsView.swift; sourceTree = "<group>"; };
 		A86F5A3858B0832703A30526 /* Pods-YARCHTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YARCHTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -337,8 +339,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6893162C5200E6FD6B251C52 /* Pods_YARCH.framework in Frameworks */,
-				ED077D3106E645289E6FF759 /* Pods_YARCH.framework in Frameworks */,
+				0FA53B4DEA515772B1461B36 /* Pods_YARCH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +586,7 @@
 		B3AE3D631FBDE2D60093CB03 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */,
 				B33011891FC3017000488D77 /* ModuleBuilder.swift */,
 				2C2EB5AA1FDFB66100FED808 /* ImageProvider.swift */,
 				B33011881FC3017000488D77 /* UniqueIdentifiable.swift */,
@@ -1048,7 +1050,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect";
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint --fix\n";
 		};
 		CE4B8CA88DD0CA5F493A1A7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1110,6 +1112,7 @@
 				457D6DF91FCB0F9300E3AD5C /* LoadingTableViewDelegate.swift in Sources */,
 				2C897720201F6A8D00BEAED3 /* APIClientFactory.swift in Sources */,
 				451165BF1FCB33A80091ADB9 /* CatalogTableDelegate.swift in Sources */,
+				8F62A57D2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */,
 				451165C51FCB77F20091ADB9 /* ArrayExtension.swift in Sources */,
 				77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */,
 				2C897725201F6B2100BEAED3 /* APIClientError.swift in Sources */,
@@ -1199,6 +1202,7 @@
 				BA8193C4202097EC006731F4 /* ArrayExtension.swift in Sources */,
 				BA8193AD20209553006731F4 /* LoadingTableViewDelegate.swift in Sources */,
 				BA8193C3202097EC006731F4 /* UITableViewExtention.swift in Sources */,
+				8F62A57C2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */,
 				2C8F302A214E3218003BB1B6 /* CatalogDetailsView.swift in Sources */,
 				2C8F3031214E326C003BB1B6 /* StringExtension.swift in Sources */,
 				2C8F302E214E321C003BB1B6 /* CoinSnapshotFullViewModel.swift in Sources */,
@@ -1426,7 +1430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9SKW2FZHU;
 				INFOPLIST_FILE = "$(SRCROOT)/YARCH/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1443,7 +1447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9SKW2FZHU;
 				INFOPLIST_FILE = "$(SRCROOT)/YARCH/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH";
 				PRODUCT_NAME = "$(TARGET_NAME)";

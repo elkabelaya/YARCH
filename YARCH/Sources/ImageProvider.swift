@@ -20,7 +20,7 @@ class ImageProvider {
         self.urlSession = urlSession
     }
 
-    func loadImageData(_ urlString: String, completion: @escaping((Data) -> Void)) {
+    func loadImageData(_ urlString: String, completion: @escaping ((Data) -> Void)) {
 
         guard let url = URL(string: baseUrl + urlString) else { return completion(Data())  }
 

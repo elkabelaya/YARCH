@@ -23,7 +23,7 @@ class CatalogPresenterTests: QuickSpec {
 
 		describe(".presentItems") {
 			context("successfull empty result") {
-				it ("should prepare empty view model and display it in view") {
+				it("should prepare empty view model and display it in view") {
 					// when
 					presenter.presentItems(response: TestData.successEmptyResponse)
 					// then
@@ -33,7 +33,7 @@ class CatalogPresenterTests: QuickSpec {
 			}
 
 			context("successfull result") {
-				it ("should prepare result view model and display it in view") {
+				it("should prepare result view model and display it in view") {
 					// when
 					presenter.presentItems(response: TestData.successResponse)
 					// then
@@ -43,7 +43,7 @@ class CatalogPresenterTests: QuickSpec {
 			}
 
 			context("failure result") {
-				it ("should prepare error view model and display it in view") {
+				it("should prepare error view model and display it in view") {
 					// when
 					presenter.presentItems(response: TestData.failureResponse)
 					// then

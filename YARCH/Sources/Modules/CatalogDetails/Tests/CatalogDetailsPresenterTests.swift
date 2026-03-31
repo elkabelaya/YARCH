@@ -23,7 +23,7 @@ class CatalogDetailsPresenterTests: QuickSpec {
 
 		describe(".presentFetchedDetails") {
 			context("successfull result") {
-				it ("should prepare result view model and display it in view") {
+				it("should prepare result view model and display it in view") {
                     // when
                     presenter.presentFetchedDetails(response: TestData.successResponse)
 
@@ -37,7 +37,7 @@ class CatalogDetailsPresenterTests: QuickSpec {
 			}
 
 			context("failure result") {
-				it ("should prepare error view model and display it in view") {
+				it("should prepare error view model and display it in view") {
 					// when
 					presenter.presentFetchedDetails(response: TestData.failureResponse)
 
