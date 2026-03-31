@@ -2,7 +2,7 @@
 
 import WatchKit
 
-protocol CatalogDisplayLogic: class {
+protocol CatalogDisplayLogic: AnyObject {
     func displayItems(viewModel: Catalog.ShowItems.ViewModel)
 }
 

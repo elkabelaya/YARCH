@@ -1,6 +1,6 @@
 import Foundation
 
-protocol APIClient: class {
+protocol APIClient: AnyObject {
 
     var session: URLSession { get set }
     var baseURLString: String { get set }

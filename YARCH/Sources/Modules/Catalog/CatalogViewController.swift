@@ -2,11 +2,11 @@
 
 import UIKit
 
-protocol CatalogDisplayLogic: class {
+protocol CatalogDisplayLogic: AnyObject {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel)
 }
 
-protocol CatalogViewControllerDelegate: class {
+protocol CatalogViewControllerDelegate: AnyObject {
     func openCoinDetails(_ coinId: UniqueIdentifier)
 }
 

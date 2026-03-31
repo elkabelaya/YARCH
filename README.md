@@ -23,6 +23,10 @@ We are using [generamba](https://github.com/rambler-digital-solutions/Generamba)
 ```
 https://github.com/alfa-laboratory/YARCH-Template
 ```
+To load Generamba from github(it contains highest version, that fixes issue https://github.com/strongself/Generamba/issues/242), use 
+```
+sh gemgit.sh https://github.com/surfstudio/Generamba.git
+```
 
 To create a new module in the example project you need to install generamba templates:
 ```

@@ -1,5 +1,5 @@
 /// Класс для хранения данных модуля Catalog
-protocol StoresCatalogModels: class {
+protocol StoresCatalogModels: AnyObject {
 	var models: [CatalogModel]? { get set }
 }
 

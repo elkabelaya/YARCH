@@ -1,6 +1,6 @@
 import UIKit
 
-protocol CatalogErrorViewDelegate: class {
+protocol CatalogErrorViewDelegate: AnyObject {
     func reloadButtonWasTapped()
 }
 

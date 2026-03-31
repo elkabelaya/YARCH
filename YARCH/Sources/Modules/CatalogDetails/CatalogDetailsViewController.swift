@@ -5,12 +5,12 @@ import UIKit
 import SafariServices
 #endif
 
-protocol CatalogDetailsDisplayLogic: class {
+protocol CatalogDetailsDisplayLogic: AnyObject {
 	func displayFetchedDetails(viewModel: CatalogDetails.ShowDetails.ViewModel)
     func displayOpenExtenalLink(viewModel: CatalogDetails.OpenExternalLink.ViewModel)
 }
 
-protocol CatalogDetailsViewControllerDelegate: class {
+protocol CatalogDetailsViewControllerDelegate: AnyObject {
     func openExternalLink(_ linkType: CoinSnapshotPropertyType)
     func presentSafariViewController(_ url: URL)
 }
