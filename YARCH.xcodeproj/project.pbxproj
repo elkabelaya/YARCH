@@ -99,6 +99,36 @@
 		8E5C4519870E9A982A356344 /* CatalogDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A54B644D7DDC7A4256EC3 /* CatalogDetailsProvider.swift */; };
 		8F62A57C2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */; };
 		8F62A57D2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */; };
+		8F62A5B72F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B42F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift */; };
+		8F62A5B92F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B02F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift */; };
+		8F62A5BA2F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B22F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift */; };
+		8F62A5BB2F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B12F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift */; };
+		8F62A5BF2F7CDB75009980D1 /* CatalogDetailsHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5AE2F7CDB75009980D1 /* CatalogDetailsHistogramView.swift */; };
+		8F62A5C02F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B32F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift */; };
+		8F62A5C22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5A22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift */; };
+		8F62A5C32F7CDB75009980D1 /* CatalogDetailsHistogramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5A42F7CDB75009980D1 /* CatalogDetailsHistogramService.swift */; };
+		8F62A5C52F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5A32F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift */; };
+		8F62A5C82F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B42F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift */; };
+		8F62A5CA2F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B02F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift */; };
+		8F62A5CB2F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B22F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift */; };
+		8F62A5CC2F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B12F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift */; };
+		8F62A5D02F7CDB75009980D1 /* CatalogDetailsHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5AE2F7CDB75009980D1 /* CatalogDetailsHistogramView.swift */; };
+		8F62A5D12F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B32F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift */; };
+		8F62A5D32F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5A22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift */; };
+		8F62A5D42F7CDB75009980D1 /* CatalogDetailsHistogramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5A42F7CDB75009980D1 /* CatalogDetailsHistogramService.swift */; };
+		8F62A5D62F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5A32F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift */; };
+		8F62A5D92F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5D82F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift */; };
+		8F62A5DA2F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5D82F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift */; };
+		8F62A5DC2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */; };
+		8F62A5DD2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */; };
+		8F62A5E02F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */; };
+		8F62A5E12F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */; };
+		8F62A5E32F7CF163009980D1 /* LinearChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */; };
+		8F62A5E42F7CF163009980D1 /* LinearChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */; };
+		8F62A5E62F7CF1E6009980D1 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */; };
+		8F62A5E72F7CF1E6009980D1 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */; };
+		8F62A5EF2F7D5BDF009980D1 /* CatalogDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */; };
+		8F62A5F02F7D5BDF009980D1 /* CatalogDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */; };
 		9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */; };
 		9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0E9671DF46475CB33ABE8B /* CatalogProviderTests.swift */; };
 		A61E964033266AB0AF8E4377 /* CatalogBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */; };
@@ -290,6 +320,21 @@
 		86C700EB058F36B609DB718B /* CatalogDetailsProviderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsProviderTests.swift; sourceTree = "<group>"; };
 		8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogBuilderTests.swift; sourceTree = "<group>"; };
 		8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F62A5A22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramDataStore.swift; sourceTree = "<group>"; };
+		8F62A5A32F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramProvider.swift; sourceTree = "<group>"; };
+		8F62A5A42F7CDB75009980D1 /* CatalogDetailsHistogramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramService.swift; sourceTree = "<group>"; };
+		8F62A5AE2F7CDB75009980D1 /* CatalogDetailsHistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramView.swift; sourceTree = "<group>"; };
+		8F62A5B02F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramBuilder.swift; sourceTree = "<group>"; };
+		8F62A5B12F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramDataFlow.swift; sourceTree = "<group>"; };
+		8F62A5B22F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramInteractor.swift; sourceTree = "<group>"; };
+		8F62A5B32F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramPresenter.swift; sourceTree = "<group>"; };
+		8F62A5B42F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramViewController.swift; sourceTree = "<group>"; };
+		8F62A5D82F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramResponseModel.swift; sourceTree = "<group>"; };
+		8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramItemModel.swift; sourceTree = "<group>"; };
+		8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramViewModel.swift; sourceTree = "<group>"; };
+		8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearChartView.swift; sourceTree = "<group>"; };
+		8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
+		8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailContentView.swift; sourceTree = "<group>"; };
 		9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogViewControllerTests.swift; sourceTree = "<group>"; };
 		A1D5BC19BA8CE1770E3E2F59 /* CatalogDetailsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsView.swift; sourceTree = "<group>"; };
 		A86F5A3858B0832703A30526 /* Pods-YARCHTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YARCHTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -478,6 +523,7 @@
 		457D6DFB1FCB112B00E3AD5C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */,
 				457D6DFC1FCB114400E3AD5C /* UIViewExtension.swift */,
 				457D6DFE1FCB128000E3AD5C /* UITableViewExtention.swift */,
 				451165C41FCB77F20091ADB9 /* ArrayExtension.swift */,
@@ -498,11 +544,64 @@
 			isa = PBXGroup;
 			children = (
 				A1D5BC19BA8CE1770E3E2F59 /* CatalogDetailsView.swift */,
+				8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */,
 				2CE28FBC1FFB6C6800FB081A /* CatalogDetailsHeaderView.swift */,
 				2CD9454B1FFD1ACE0017CEAD /* CatalogDetailsCell.swift */,
 				2C1B2BEF2013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8F62A5A12F7CDB75009980D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */,
+				8F62A5D82F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F62A5A52F7CDB75009980D1 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				8F62A5A22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift */,
+				8F62A5A32F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift */,
+				8F62A5A42F7CDB75009980D1 /* CatalogDetailsHistogramService.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		8F62A5AF2F7CDB75009980D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */,
+				8F62A5AE2F7CDB75009980D1 /* CatalogDetailsHistogramView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F62A5B52F7CDB75009980D1 /* CatalogDetailsHistogram */ = {
+			isa = PBXGroup;
+			children = (
+				8F62A5B02F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift */,
+				8F62A5B12F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift */,
+				8F62A5B22F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift */,
+				8F62A5B32F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift */,
+				8F62A5B42F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift */,
+				8F62A5A52F7CDB75009980D1 /* Provider */,
+				8F62A5A12F7CDB75009980D1 /* Model */,
+				8F62A5AF2F7CDB75009980D1 /* View */,
+				8F62A5DE2F7CEE7D009980D1 /* ViewModel */,
+			);
+			path = CatalogDetailsHistogram;
+			sourceTree = "<group>";
+		};
+		8F62A5DE2F7CEE7D009980D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A74F88A73FD4388BBE59227D /* Tests */ = {
@@ -530,8 +629,8 @@
 				1537A8984F7C517A6686D99E /* CatalogDataFlow.swift */,
 				451165BE1FCB33A80091ADB9 /* CatalogTableDelegate.swift */,
 				451165BC1FCB337F0091ADB9 /* CatalogTableDataSource.swift */,
-				1E94AFCDD5FEF6FE6D11FE9C /* Model */,
 				E8D4DDF4FF9C3857B19A24E0 /* Provider */,
+				1E94AFCDD5FEF6FE6D11FE9C /* Model */,
 				0CB7DFC271CF66A1AA34B1B1 /* View */,
 				A74F88A73FD4388BBE59227D /* Tests */,
 			);
@@ -602,6 +701,7 @@
 		B3AE3D641FBDE2FB0093CB03 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8F62A5B52F7CDB75009980D1 /* CatalogDetailsHistogram */,
 				AC12091DEBAD47B3E03B286E /* Catalog */,
 				C69C32A07DBA7B69C7794657 /* CatalogDetails */,
 			);
@@ -1085,6 +1185,7 @@
 				2C89771E201F695D00BEAED3 /* HTTPAPIClient.swift in Sources */,
 				B30BF7521FBDD785005C8A83 /* ViewController.swift in Sources */,
 				2CD945481FFD01230017CEAD /* CatalogDetailsTableDataSource.swift in Sources */,
+				8F62A5E32F7CF163009980D1 /* LinearChartView.swift in Sources */,
 				2C1B2BEE2013582100AE41B3 /* NumberFormatterWorker.swift in Sources */,
 				2CE28FBD1FFB6C6800FB081A /* CatalogDetailsHeaderView.swift in Sources */,
 				B30BF7501FBDD785005C8A83 /* AppDelegate.swift in Sources */,
@@ -1097,6 +1198,7 @@
 				B330118B1FC3017000488D77 /* ModuleBuilder.swift in Sources */,
 				3E83E1C642A78587CB7A2B75 /* CatalogBuilder.swift in Sources */,
 				457D6DF71FCB0F9300E3AD5C /* LoadingTableViewCell.swift in Sources */,
+				8F62A5E02F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */,
 				457D6E031FCB242800E3AD5C /* CatalogErrorView.swift in Sources */,
 				E41E0C4DFE9F0E3D2A7A424C /* CatalogViewController.swift in Sources */,
 				CD5FD9D2A810A3927D12248B /* CatalogInteractor.swift in Sources */,
@@ -1111,18 +1213,31 @@
 				451165BD1FCB337F0091ADB9 /* CatalogTableDataSource.swift in Sources */,
 				457D6DF91FCB0F9300E3AD5C /* LoadingTableViewDelegate.swift in Sources */,
 				2C897720201F6A8D00BEAED3 /* APIClientFactory.swift in Sources */,
+				8F62A5D92F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift in Sources */,
 				451165BF1FCB33A80091ADB9 /* CatalogTableDelegate.swift in Sources */,
 				8F62A57D2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */,
 				451165C51FCB77F20091ADB9 /* ArrayExtension.swift in Sources */,
 				77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */,
 				2C897725201F6B2100BEAED3 /* APIClientError.swift in Sources */,
+				8F62A5DD2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift in Sources */,
 				2C897727201F6B3800BEAED3 /* HTTPMethod.swift in Sources */,
 				2CF2AB552020FC6B0077B240 /* APIClientProvider.swift in Sources */,
+				8F62A5E62F7CF1E6009980D1 /* SwiftUIExtensions.swift in Sources */,
 				2C598D5E1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift in Sources */,
 				2CD945461FFD00850017CEAD /* CatalogDetailsTableDelegate.swift in Sources */,
 				2C1B2BF02013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift in Sources */,
 				2C2EB5AB1FDFB66100FED808 /* ImageProvider.swift in Sources */,
 				FF306F420E4E1342CEA3D128 /* CatalogDetailsBuilder.swift in Sources */,
+				8F62A5B72F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift in Sources */,
+				8F62A5B92F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift in Sources */,
+				8F62A5BA2F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift in Sources */,
+				8F62A5BB2F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift in Sources */,
+				8F62A5F02F7D5BDF009980D1 /* CatalogDetailContentView.swift in Sources */,
+				8F62A5BF2F7CDB75009980D1 /* CatalogDetailsHistogramView.swift in Sources */,
+				8F62A5C02F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift in Sources */,
+				8F62A5C22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift in Sources */,
+				8F62A5C32F7CDB75009980D1 /* CatalogDetailsHistogramService.swift in Sources */,
+				8F62A5C52F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift in Sources */,
 				41211F22FAC616D2F7C513B6 /* CatalogDetailsViewController.swift in Sources */,
 				DD939B21474EC0A81D22DF0A /* CatalogDetailsInteractor.swift in Sources */,
 				2CEB5C3C1FDD37B100E43341 /* CoinSnapshotFullResponseModel.swift in Sources */,
@@ -1175,6 +1290,7 @@
 				2C8F3024214E3203003BB1B6 /* CatalogDetailsProvider.swift in Sources */,
 				2C8F3019214E18B9003BB1B6 /* APIClientFactory.swift in Sources */,
 				BA8193AE2020955C006731F4 /* CatalogBuilder.swift in Sources */,
+				8F62A5E42F7CF163009980D1 /* LinearChartView.swift in Sources */,
 				2C8F302D214E3218003BB1B6 /* CatalogDetailsCoinImageView.swift in Sources */,
 				2C8F3029214E3211003BB1B6 /* CoinSnapshotPropertyViewModel.swift in Sources */,
 				2C8F3023214E31FB003BB1B6 /* CatalogDetailsTableDelegate.swift in Sources */,
@@ -1187,6 +1303,7 @@
 				BA8193AA20209553006731F4 /* LoadingSectionHeaderView.swift in Sources */,
 				BA8193B820209564006731F4 /* CatalogProvider.swift in Sources */,
 				BA8193B920209564006731F4 /* CatalogDataStore.swift in Sources */,
+				8F62A5E12F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */,
 				BA8193B42020955C006731F4 /* CatalogTableDataSource.swift in Sources */,
 				2C8F3027214E320B003BB1B6 /* CoinSnapshotFullResponseModel.swift in Sources */,
 				2C8F301F214E317C003BB1B6 /* CatalogDetailsPresenter.swift in Sources */,
@@ -1201,18 +1318,31 @@
 				BA8193B620209560006731F4 /* CatalogViewModel.swift in Sources */,
 				BA8193C4202097EC006731F4 /* ArrayExtension.swift in Sources */,
 				BA8193AD20209553006731F4 /* LoadingTableViewDelegate.swift in Sources */,
+				8F62A5DA2F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift in Sources */,
 				BA8193C3202097EC006731F4 /* UITableViewExtention.swift in Sources */,
 				8F62A57C2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */,
 				2C8F302A214E3218003BB1B6 /* CatalogDetailsView.swift in Sources */,
 				2C8F3031214E326C003BB1B6 /* StringExtension.swift in Sources */,
 				2C8F302E214E321C003BB1B6 /* CoinSnapshotFullViewModel.swift in Sources */,
+				8F62A5DC2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift in Sources */,
 				BA8193B12020955C006731F4 /* CatalogPresenter.swift in Sources */,
 				BA81939B2020943E006731F4 /* AppDelegate.swift in Sources */,
+				8F62A5E72F7CF1E6009980D1 /* SwiftUIExtensions.swift in Sources */,
 				2C8F3028214E320D003BB1B6 /* NumberFormatterWorker.swift in Sources */,
 				2C8F302B214E3218003BB1B6 /* CatalogDetailsHeaderView.swift in Sources */,
 				2C8F301C214E18D5003BB1B6 /* HTTPMethod.swift in Sources */,
 				2C8F301A214E18C2003BB1B6 /* HTTPAPIClient.swift in Sources */,
 				BA8193C2202097EC006731F4 /* UIViewExtension.swift in Sources */,
+				8F62A5C82F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift in Sources */,
+				8F62A5CA2F7CDB75009980D1 /* CatalogDetailsHistogramBuilder.swift in Sources */,
+				8F62A5CB2F7CDB75009980D1 /* CatalogDetailsHistogramInteractor.swift in Sources */,
+				8F62A5CC2F7CDB75009980D1 /* CatalogDetailsHistogramDataFlow.swift in Sources */,
+				8F62A5EF2F7D5BDF009980D1 /* CatalogDetailContentView.swift in Sources */,
+				8F62A5D02F7CDB75009980D1 /* CatalogDetailsHistogramView.swift in Sources */,
+				8F62A5D12F7CDB75009980D1 /* CatalogDetailsHistogramPresenter.swift in Sources */,
+				8F62A5D32F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift in Sources */,
+				8F62A5D42F7CDB75009980D1 /* CatalogDetailsHistogramService.swift in Sources */,
+				8F62A5D62F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift in Sources */,
 				BA8193B02020955C006731F4 /* CatalogInteractor.swift in Sources */,
 				2C8F3030214E324D003BB1B6 /* ImageProvider.swift in Sources */,
 				BA8193BC2020956A006731F4 /* CatalogErrorView.swift in Sources */,

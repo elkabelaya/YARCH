@@ -56,6 +56,12 @@ class CatalogDetailsPresenter: CatalogDetailsPresentationLogic {
 
         let blockReward = CoinSnapshotPropertyViewModel(type: .blockReward, value: String(model.blockReward))
         let properties = [website, twitter, percentMined, blockReward].compactMap { $0 }
-        return CoinSnapshotFullViewModel(uid: model.uid, title: title, image: image, properties: properties)
+        return CoinSnapshotFullViewModel(
+            uid: model.uid,
+            symbol: model.symbol,
+            title: title,
+            image: image,
+            properties: properties
+        )
     }
 }

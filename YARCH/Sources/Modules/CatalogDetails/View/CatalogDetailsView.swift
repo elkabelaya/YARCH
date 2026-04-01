@@ -4,22 +4,22 @@ import UIKit
 
 extension CatalogDetailsView {
     struct Appearance {
-        let tableRowHeight: CGFloat = 60
-        let tableHeaderViewHeight: CGFloat = 150
     }
 }
 
 class CatalogDetailsView: UIView {
-
     weak var refreshActionsDelegate: CatalogErrorViewDelegate?
+    weak var delegate: CatalogDetailsViewControllerDelegate? {
+        didSet {
+            detailView.clickDelegate = delegate
+        }
+    }
 
     let appearance: Appearance
 
-    var tableView: UITableView
+    let loadingView: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
 
-    var tableHeaderView: CatalogDetailsHeaderView? {
-        return tableView.tableHeaderView as? CatalogDetailsHeaderView
-    }
+    let detailView: CatalogDetailContentView
 
     lazy var emptyView = CatalogEmptyView()
 
@@ -32,18 +32,24 @@ class CatalogDetailsView: UIView {
     init(frame: CGRect = CGRect.zero,
          loadingDataSource: UITableViewDataSource,
          loadingDelegate: UITableViewDelegate,
-         refreshDelegate: CatalogErrorViewDelegate, appearance: Appearance = Appearance()) {
+         refreshDelegate: CatalogErrorViewDelegate,
+         clickDelegate: CatalogDetailsViewControllerDelegate,
+         appearance: Appearance = Appearance()) {
 
-        tableView = UITableView(delegate: loadingDelegate, dataSource: loadingDataSource)
+        detailView = CatalogDetailContentView(
+            dataSource: loadingDataSource,
+            delegate: loadingDelegate,
+            clickDelegate: clickDelegate
+        )
         self.appearance = appearance
         super.init(frame: frame)
         refreshActionsDelegate = refreshDelegate
-        configureTableView()
+        setup()
         addSubviews()
         makeConstraints()
 
         emptyView.isHidden = true
-        tableView.isHidden = true
+        detailView.isHidden = true
         errorView.isHidden = true
     }
 
@@ -54,39 +60,28 @@ class CatalogDetailsView: UIView {
     // MARK: Configuration
 
     func configureHeaderView(_ viewModel: CoinSnapshotFullViewModel) {
-        if let image = viewModel.image {
-            tableHeaderView?.imageView.image = image
-        } else {
-            tableHeaderView?.imageView.showPlaceholder()
-        }
-    }
-
-    func configureTableView() {
-        #if !(os(tvOS))
-        tableView.separatorStyle = .none
-        #endif
-        tableView.rowHeight = appearance.tableRowHeight
-        tableView.tableHeaderView = CatalogDetailsHeaderView()
-        tableView.sectionFooterHeight = UITableView.automaticDimension
-        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        detailView.configureHeaderView(viewModel)
     }
 
     func updateTableViewData(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         showTable()
-        tableView.tableFooterView = nil
-        tableView.dataSource = dataSource
-        tableView.delegate = delegate
-        tableView.reloadData()
+        detailView.updateTableViewData(delegate: delegate, dataSource: dataSource)
+    }
+
+    func setup() {
+        self.backgroundColor = .white
     }
 
     func addSubviews() {
-        addSubview(tableView)
+        addSubview(loadingView)
+        addSubview(detailView)
         addSubview(emptyView)
         addSubview(errorView)
     }
 
     func showLoading() {
-        show(view: tableView)
+        show(view: loadingView)
+        loadingView.startAnimating()
     }
 
     func showError(message: String) {
@@ -95,7 +90,7 @@ class CatalogDetailsView: UIView {
     }
 
     func showTable() {
-        show(view: tableView)
+        show(view: detailView)
     }
 
     func show(view: UIView) {
@@ -104,14 +99,15 @@ class CatalogDetailsView: UIView {
 
     // MARK: Layout
 
-	func makeConstraints() {
-        tableView.snp.makeConstraints { make in
+    func makeConstraints() {
+        loadingView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+
+        detailView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        tableHeaderView?.snp.makeConstraints { (make) in
-            make.width.equalTo(tableView)
-            make.height.equalTo(appearance.tableHeaderViewHeight)
-        }
+
         emptyView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -119,7 +115,8 @@ class CatalogDetailsView: UIView {
         errorView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-	}
+    }
+
 }
 
 extension CatalogDetailsView: UITableViewDelegate, UITableViewDataSource {

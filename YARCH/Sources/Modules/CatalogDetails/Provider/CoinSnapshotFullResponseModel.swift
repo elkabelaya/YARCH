@@ -12,6 +12,7 @@ struct TwitterModel: Decodable {
 
 struct CoinSnapshotFullModel: Decodable, UniqueIdentifiable {
     let uid: String
+    let symbol: String
     let title: String
     let imageUrlString: String
     let website: String?
@@ -22,6 +23,7 @@ struct CoinSnapshotFullModel: Decodable, UniqueIdentifiable {
 
     private enum CodingKeys: String, CodingKey {
         case uid = "Id"
+        case symbol = "Symbol"
         case title = "H1Text"
         case imageUrlString = "ImageUrl"
         case website = "Website"

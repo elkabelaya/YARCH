@@ -13,6 +13,7 @@ protocol CatalogDetailsDisplayLogic: AnyObject {
 protocol CatalogDetailsViewControllerDelegate: AnyObject {
     func openExternalLink(_ linkType: CoinSnapshotPropertyType)
     func presentSafariViewController(_ url: URL)
+    func openCoinHistogram()
 }
 
 class CatalogDetailsViewController: UIViewController {
@@ -76,7 +77,8 @@ class CatalogDetailsViewController: UIViewController {
         self.view = CatalogDetailsView(frame: UIScreen.main.bounds,
                                       loadingDataSource: loadingTableDataSource,
                                       loadingDelegate: loadingTableHandler,
-                                      refreshDelegate: self)
+                                      refreshDelegate: self,
+                                      clickDelegate: self)
 	}
 
 	override func viewDidLoad() {
@@ -159,6 +161,16 @@ extension CatalogDetailsViewController: CatalogDetailsViewControllerDelegate {
         let safariViewController = SFSafariViewController(url: url)
         navigationController?.present(safariViewController, animated: true, completion: nil)
         #endif
+    }
+
+    func openCoinHistogram() {
+        if case let .result(snapshotViewModel: viewModel, infoRepresentable: _) = state {
+            let histogramController = CatalogDetailsHistogramBuilder()
+                .set(initialState: .initial(model: viewModel))
+                .build()
+            navigationController?.pushViewController(histogramController, animated: true)
+        }
+
     }
 }
 
