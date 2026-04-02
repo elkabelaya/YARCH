@@ -3,7 +3,7 @@
 ## Overview
 Try YARCH architecture by adding HistogramDetailView:
 
-![](HistogramDetail.gif)
+<img src="HistogramDetail.gif" height="700">
 
 [Here](GUIDE.md) are more about YARCH components.
 
