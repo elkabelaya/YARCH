@@ -97,6 +97,13 @@
 		77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB09649E354CDAFB5F3165 /* CatalogDataStore.swift */; };
 		89FFCF173102FE39D6C0242A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */; };
 		8E5C4519870E9A982A356344 /* CatalogDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A54B644D7DDC7A4256EC3 /* CatalogDetailsProvider.swift */; };
+		8F579D6A2F7E6AF9000E77EA /* CatalogDetailsHistogramViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D5B2F7E6AB9000E77EA /* CatalogDetailsHistogramViewControllerTests.swift */; };
+		8F579D6B2F7E6AF9000E77EA /* CatalogDetailsHistogramModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D572F7E6AB9000E77EA /* CatalogDetailsHistogramModelTests.swift */; };
+		8F579D6C2F7E6AF9000E77EA /* CatalogDetailsHistogramServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D5A2F7E6AB9000E77EA /* CatalogDetailsHistogramServiceTests.swift */; };
+		8F579D6D2F7E6AF9000E77EA /* CatalogDetailsHistogramBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D552F7E6AB9000E77EA /* CatalogDetailsHistogramBuilderTests.swift */; };
+		8F579D6E2F7E6AF9000E77EA /* CatalogDetailsHistogramProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D592F7E6AB9000E77EA /* CatalogDetailsHistogramProviderTests.swift */; };
+		8F579D6F2F7E6AF9000E77EA /* CatalogDetailsHistogramInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D562F7E6AB9000E77EA /* CatalogDetailsHistogramInteractorTests.swift */; };
+		8F579D702F7E6AF9000E77EA /* CatalogDetailsHistogramPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F579D582F7E6AB9000E77EA /* CatalogDetailsHistogramPresenterTests.swift */; };
 		8F62A57C2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */; };
 		8F62A57D2F7BE2ED009980D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */; };
 		8F62A5B72F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5B42F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift */; };
@@ -319,6 +326,13 @@
 		79F5D8A8B1540D0D29696823 /* Pods_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C700EB058F36B609DB718B /* CatalogDetailsProviderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsProviderTests.swift; sourceTree = "<group>"; };
 		8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogBuilderTests.swift; sourceTree = "<group>"; };
+		8F579D552F7E6AB9000E77EA /* CatalogDetailsHistogramBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramBuilderTests.swift; sourceTree = "<group>"; };
+		8F579D562F7E6AB9000E77EA /* CatalogDetailsHistogramInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramInteractorTests.swift; sourceTree = "<group>"; };
+		8F579D572F7E6AB9000E77EA /* CatalogDetailsHistogramModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramModelTests.swift; sourceTree = "<group>"; };
+		8F579D582F7E6AB9000E77EA /* CatalogDetailsHistogramPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramPresenterTests.swift; sourceTree = "<group>"; };
+		8F579D592F7E6AB9000E77EA /* CatalogDetailsHistogramProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramProviderTests.swift; sourceTree = "<group>"; };
+		8F579D5A2F7E6AB9000E77EA /* CatalogDetailsHistogramServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramServiceTests.swift; sourceTree = "<group>"; };
+		8F579D5B2F7E6AB9000E77EA /* CatalogDetailsHistogramViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramViewControllerTests.swift; sourceTree = "<group>"; };
 		8F62A57B2F7BE2E8009980D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8F62A5A22F7CDB75009980D1 /* CatalogDetailsHistogramDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramDataStore.swift; sourceTree = "<group>"; };
 		8F62A5A32F7CDB75009980D1 /* CatalogDetailsHistogramProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramProvider.swift; sourceTree = "<group>"; };
@@ -592,6 +606,7 @@
 				8F62A5A12F7CDB75009980D1 /* Model */,
 				8F62A5AF2F7CDB75009980D1 /* View */,
 				8F62A5DE2F7CEE7D009980D1 /* ViewModel */,
+				8F62A5F82F7E34C2009980D1 /* Tests */,
 			);
 			path = CatalogDetailsHistogram;
 			sourceTree = "<group>";
@@ -602,6 +617,20 @@
 				8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F62A5F82F7E34C2009980D1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8F579D552F7E6AB9000E77EA /* CatalogDetailsHistogramBuilderTests.swift */,
+				8F579D562F7E6AB9000E77EA /* CatalogDetailsHistogramInteractorTests.swift */,
+				8F579D572F7E6AB9000E77EA /* CatalogDetailsHistogramModelTests.swift */,
+				8F579D582F7E6AB9000E77EA /* CatalogDetailsHistogramPresenterTests.swift */,
+				8F579D592F7E6AB9000E77EA /* CatalogDetailsHistogramProviderTests.swift */,
+				8F579D5A2F7E6AB9000E77EA /* CatalogDetailsHistogramServiceTests.swift */,
+				8F579D5B2F7E6AB9000E77EA /* CatalogDetailsHistogramViewControllerTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		A74F88A73FD4388BBE59227D /* Tests */ = {
@@ -1111,11 +1140,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YARCHTests/Pods-YARCHTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CwlCatchException/CwlCatchException.framework",
+				"${BUILT_PRODUCTS_DIR}/CwlCatchExceptionSupport/CwlCatchExceptionSupport.framework",
+				"${BUILT_PRODUCTS_DIR}/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.framework",
+				"${BUILT_PRODUCTS_DIR}/CwlPosixPreconditionTesting/CwlPosixPreconditionTesting.framework",
+				"${BUILT_PRODUCTS_DIR}/CwlPreconditionTesting/CwlPreconditionTesting.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CwlCatchException.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CwlCatchExceptionSupport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CwlMachBadInstructionHandler.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CwlPosixPreconditionTesting.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CwlPreconditionTesting.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -1271,6 +1310,13 @@
 				9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */,
 				2C87A755202C2D50001D9FD9 /* CatalogDetailsProviderTests.swift in Sources */,
 				9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */,
+				8F579D6A2F7E6AF9000E77EA /* CatalogDetailsHistogramViewControllerTests.swift in Sources */,
+				8F579D6B2F7E6AF9000E77EA /* CatalogDetailsHistogramModelTests.swift in Sources */,
+				8F579D6C2F7E6AF9000E77EA /* CatalogDetailsHistogramServiceTests.swift in Sources */,
+				8F579D6D2F7E6AF9000E77EA /* CatalogDetailsHistogramBuilderTests.swift in Sources */,
+				8F579D6E2F7E6AF9000E77EA /* CatalogDetailsHistogramProviderTests.swift in Sources */,
+				8F579D6F2F7E6AF9000E77EA /* CatalogDetailsHistogramInteractorTests.swift in Sources */,
+				8F579D702F7E6AF9000E77EA /* CatalogDetailsHistogramPresenterTests.swift in Sources */,
 				2C87A754202C2D4C001D9FD9 /* CatalogDetailsPresenterTests.swift in Sources */,
 				CB797E62A19181E405CB5295 /* CatalogModelTests.swift in Sources */,
 				2CF2AB532020F8BE0077B240 /* APIClientProviderTests.swift in Sources */,
@@ -1595,6 +1641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9SKW2FZHU;
 				INFOPLIST_FILE = YARCHTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCHTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1613,6 +1660,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9SKW2FZHU;
 				INFOPLIST_FILE = YARCHTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCHTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

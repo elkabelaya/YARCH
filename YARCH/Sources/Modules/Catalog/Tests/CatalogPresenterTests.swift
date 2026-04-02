@@ -11,7 +11,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogPresenterTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var presenter: CatalogPresenter!
 		var viewControllerMock: CatalogViewControllerMock!
 

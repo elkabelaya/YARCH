@@ -12,7 +12,7 @@ import SafariServices
 @testable import YARCH
 
 class CatalogDetailsViewControllerTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var viewController: CatalogDetailsViewController!
 		var interactorMock: CatalogDetailsInteractorMock!
         var initialState: CatalogDetails.ViewControllerState!
@@ -155,7 +155,7 @@ extension CatalogDetailsViewControllerTests {
         static let twitterProperty = CoinSnapshotPropertyViewModel(type: .twitter, value: "http://www.twitter.com/jack")
         static let percentMinedProperty = CoinSnapshotPropertyViewModel(type: .percentMined, value: "80 %")
         static let blockRewardProperty = CoinSnapshotPropertyViewModel(type: .blockReward, value: "12.0")
-        static let snapshotViewModel = CoinSnapshotFullViewModel(uid: coinId,
+        static let snapshotViewModel = CoinSnapshotFullViewModel(uid: coinId, symbol: "",
                                                                  title: "title",
                                                                  image: UIImage(),
                                                                  properties: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])

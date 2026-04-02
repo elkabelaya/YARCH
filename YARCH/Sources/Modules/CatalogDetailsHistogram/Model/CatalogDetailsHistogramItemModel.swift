@@ -32,3 +32,9 @@ struct CatalogDetailsHistogramItemModel: Decodable {
         case conversionSymbol
     }
 }
+
+extension CatalogDetailsHistogramItemModel: Equatable {
+    static func == (lhs: CatalogDetailsHistogramItemModel, rhs: CatalogDetailsHistogramItemModel) -> Bool {
+        return lhs.time == rhs.time
+    }
+}

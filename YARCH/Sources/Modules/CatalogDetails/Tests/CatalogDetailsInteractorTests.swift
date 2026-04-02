@@ -12,7 +12,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsInteractorTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var interactor: CatalogDetailsInteractor!
 		var presenterMock: CatalogDetailsPresenterMock!
 		var providerMock: CatalogDetailsProviderMock!
@@ -69,19 +69,22 @@ extension CatalogDetailsInteractorTests {
 	enum TestData {
         static let coinId = "1"
         static let uid = UUID().uuidString
+        static let symbol = "SOME"
         static let title = "SomeCoin"
         static let otherTitle = "OtherCoin"
         static let imageUrlString = "http://www.example.com/image.png"
         static let website = "http://www.example.com"
         static let twitter = "http://www.twitter.com/jack"
-        static let totalSupply = "10000000"
+        static let totalSupply = 10000000.0
         static let totalMined = 80.0
         static let blockReward = 12.0
+        static let twitterModel = TwitterModel(url: twitter)
         static let model = CoinSnapshotFullModel(uid: uid,
+                                                 symbol: symbol,
                                                  title: title,
                                                  imageUrlString: imageUrlString,
                                                  website: website,
-                                                 twitter: twitter,
+                                                 twitter: twitterModel,
                                                  totalSupply: totalSupply,
                                                  totalMined: totalMined,
                                                  blockReward: blockReward)

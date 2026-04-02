@@ -14,7 +14,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsHistogramBuilderTests: QuickSpec {
-    override func spec() {
+    override class func spec() {
         var builder: CatalogDetailsHistogramBuilder!
 
         beforeEach {

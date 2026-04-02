@@ -12,7 +12,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsServiceTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 
         var apiClient: APIClientMock<Any>!
         var decoder: JSONDecoderMock!
@@ -21,7 +21,7 @@ class CatalogDetailsServiceTests: QuickSpec {
         var completionCalledExpectation: XCTestExpectation!
 
         beforeEach {
-            completionCalledExpectation = self.expectation(description: "Completion called")
+            completionCalledExpectation = QuickSpec.current.expectation(description: "Completion called")
             apiClient = APIClientMock()
             decoder = JSONDecoderMock()
             service = CatalogDetailsService(apiClient: apiClient, decoder: decoder)
@@ -41,7 +41,7 @@ class CatalogDetailsServiceTests: QuickSpec {
                     })
 
                     // then
-                    self.waitForExpectations(timeout: 1.0, handler: { error in
+                    QuickSpec.current.waitForExpectations(timeout: 1.0, handler: { error in
                         expect(error).to(beNil())
                         expect(decoder.decodeDidCalled).to(equal(1))
                     })
@@ -57,7 +57,7 @@ class CatalogDetailsServiceTests: QuickSpec {
                     })
 
                     // then
-                    self.waitForExpectations(timeout: 1.0, handler: { error in
+                    QuickSpec.current.waitForExpectations(timeout: 1.0, handler: { error in
                         expect(error).to(beNil())
                         expect(decoder.decodeStub).to(beAnInstanceOf(CoinSnapshotFullResponseWrapper.self))
                     })
@@ -74,7 +74,7 @@ class CatalogDetailsServiceTests: QuickSpec {
                     })
 
                     // then
-                    self.waitForExpectations(timeout: 1.0, handler: { error in
+                    QuickSpec.current.waitForExpectations(timeout: 1.0, handler: { error in
                         expect(error).to(beNil())
                         expect(fetchItemsRequestResult).to(beSuccessfull(test: {
                             expect($0).to(equal(TestData.successModel))
@@ -93,7 +93,7 @@ class CatalogDetailsServiceTests: QuickSpec {
                     })
 
                     // then
-                    self.waitForExpectations(timeout: 1.0, handler: { error in
+                    QuickSpec.current.waitForExpectations(timeout: 1.0, handler: { error in
                         expect(error).to(beNil())
                         expect(decoder.decodeDidCalled).to(equal(1))
                         expect(decoder.decodeStub).toNot(beAnInstanceOf(CoinSnapshotFullResponseWrapper.self))
@@ -114,7 +114,7 @@ class CatalogDetailsServiceTests: QuickSpec {
                     })
 
                     // then
-                    self.waitForExpectations(timeout: 1.0, handler: { error in
+                    QuickSpec.current.waitForExpectations(timeout: 1.0, handler: { error in
                         expect(error).to(beNil())
                         expect(decoder.decodeDidCalled).to(equal(1))
                     })
@@ -130,7 +130,7 @@ class CatalogDetailsServiceTests: QuickSpec {
                     })
 
                     // then
-                    self.waitForExpectations(timeout: 1.0, handler: { error in
+                    QuickSpec.current.waitForExpectations(timeout: 1.0, handler: { error in
                         expect(error).to(beNil())
                         expect(fetchItemsRequestResult).to(beFailure(test: {
                             expect($0).to(beAnInstanceOf(CatalogDetailsError.self))
@@ -180,22 +180,22 @@ private class ErrorMock: Error {}
 
 // MARK: Custom Matchers
 
-func beSuccessfull(test: @escaping (CoinSnapshotFullModel) -> Void = { _ in }) -> Predicate<(Result<CoinSnapshotFullModel>)> {
-    return Predicate.define("be <successful>", matcher: { expr, message in
+func beSuccessfull(test: @escaping (CoinSnapshotFullModel) -> Void = { _ in }) -> Matcher<(Result<CoinSnapshotFullModel>)> {
+    return Matcher.define("be <successful>", matcher: { expr, message in
         if let actual = try expr.evaluate(), case let .success(coinSnapshotFullModel) = actual {
             test(coinSnapshotFullModel)
-            return PredicateResult(status: .matches, message: message)
+            return MatcherResult(status: .matches, message: message)
         }
-        return PredicateResult(status: .fail, message: message)
+        return MatcherResult(status: .fail, message: message)
     })
 }
 
-func beFailure(test: @escaping (CatalogDetailsError) -> Void = { _ in }) -> Predicate<(Result<CoinSnapshotFullModel>)> {
-    return Predicate.define("be <successful>", matcher: { expr, message in
+func beFailure(test: @escaping (CatalogDetailsError) -> Void = { _ in }) -> Matcher<(Result<CoinSnapshotFullModel>)> {
+    return Matcher.define("be <successful>", matcher: { expr, message in
         if let actual = try expr.evaluate(), case let .failure(error) = actual, let catalogDetailsError = error as? CatalogDetailsError {
             test(catalogDetailsError)
-            return PredicateResult(status: .matches, message: message)
+            return MatcherResult(status: .matches, message: message)
         }
-        return PredicateResult(status: .fail, message: message)
+        return MatcherResult(status: .fail, message: message)
     })
 }

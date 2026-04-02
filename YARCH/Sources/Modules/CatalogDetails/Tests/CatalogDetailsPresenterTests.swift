@@ -11,7 +11,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsPresenterTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var presenter: CatalogDetailsPresenter!
 		var viewControllerMock: CatalogDetailsViewControllerMock!
 
@@ -82,7 +82,7 @@ extension CatalogDetailsPresenterTests {
         static let twitterProperty = CatalogDetailsViewControllerTests.TestData.twitterProperty
         static let percentMinedProperty = CatalogDetailsViewControllerTests.TestData.percentMinedProperty
         static let blockRewardProperty = CatalogDetailsViewControllerTests.TestData.blockRewardProperty
-        static let expectedCoinSnapshotViewModel = CoinSnapshotFullViewModel(uid: "1",
+        static let expectedCoinSnapshotViewModel = CoinSnapshotFullViewModel(uid: "1", symbol: "SOME",
                                                                              title: "SomeCoin",
                                                                              image: nil,
                                                                              properties: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])

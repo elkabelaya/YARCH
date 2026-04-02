@@ -12,7 +12,7 @@ import Nimble
 
 class APIClientProviderTests: QuickSpec {
 
-    override func spec() {
+    override class func spec() {
         var apiClientFactory: APIClientFactoryMock!
         var apiProvider: APIClientProvider!
 

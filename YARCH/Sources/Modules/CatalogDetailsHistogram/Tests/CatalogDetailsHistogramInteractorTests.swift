@@ -12,7 +12,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsHistogramInteractorTests: QuickSpec {
-    override func spec() {
+    override class func spec() {
         var interactor: CatalogDetailsHistogramInteractor!
         var presenterMock: CatalogDetailsHistogramPresenterMock!
         var providerMock: CatalogDetailsHistogramProviderMock!
@@ -23,10 +23,10 @@ class CatalogDetailsHistogramInteractorTests: QuickSpec {
             interactor = CatalogDetailsHistogramInteractor(presenter: presenterMock, provider: providerMock)
         }
 
-        describe(".doSomething") {
+        describe(".fetchHistory") {
             it("should get data from provider") {
                 // when
-                interactor.doSomething(request: TestData.request)
+                interactor.fetchHistory(request: TestData.request)
                 // then
                 expect(providerMock.getItemsWasCalled).to(equal(1))
             }
@@ -36,7 +36,7 @@ class CatalogDetailsHistogramInteractorTests: QuickSpec {
                     // given
                     providerMock.getItemsCompletionStub = (result: TestData.models, error: nil)
                     // when
-                    interactor.doSomething(request: TestData.request)
+                    interactor.fetchHistory(request: TestData.request)
                     // then
                     expect(presenterMock.presentSomethingWasCalled).to(equal(1))
                     expect(presenterMock.presentSomethingArguments).toNot(beNil())
@@ -49,7 +49,7 @@ class CatalogDetailsHistogramInteractorTests: QuickSpec {
                     // given
                     providerMock.getItemsCompletionStub = (result: nil, error: TestData.getItemsFailedError)
                     // when
-                    interactor.doSomething(request: TestData.request)
+                    interactor.fetchHistory(request: TestData.request)
                     // then
                     expect(presenterMock.presentSomethingWasCalled).to(equal(1))
                     expect(presenterMock.presentSomethingArguments).toNot(beNil())
@@ -62,20 +62,23 @@ class CatalogDetailsHistogramInteractorTests: QuickSpec {
 
 extension CatalogDetailsHistogramInteractorTests {
     enum TestData {
-        static let request = CatalogDetailsHistogram.Something.Request()
-        static let models = CatalogDetailsHistogramModelTests.TestData.entitiesCollection()
+        static let coinSym = "BTC"
+        static let request = CatalogDetailsHistogram.ShowHistogram.Request(coinSym: coinSym)
+        static let models = CatalogDetailsHistogramItemModelTests.TestData.entitiesCollection()
 
         fileprivate static let underlyingError = ErrorMock()
-        fileprivate static let getItemsFailedError = CatalogDetailsHistogramProviderError.getItemsFailed(underlyingError: underlyingError)
+        fileprivate static let getItemsFailedError = CatalogDetailsHistogramProviderError.getItemsFailed(
+            underlyingError: .getItemsFailed(message: "error")
+        )
     }
 }
 
 private class CatalogDetailsHistogramProviderMock: CatalogDetailsHistogramProviderProtocol {
     var getItemsWasCalled: Int = 0
-    var getItemsArguments: (([CatalogDetailsHistogramModel]?, CatalogDetailsHistogramProviderError?) -> Void)?
-    var getItemsCompletionStub: (result: [CatalogDetailsHistogramModel]?, error: CatalogDetailsHistogramProviderError?) = (nil, nil)
+    var getItemsArguments: (([CatalogDetailsHistogramItemModel]?, CatalogDetailsHistogramProviderError?) -> Void)?
+    var getItemsCompletionStub: (result: [CatalogDetailsHistogramItemModel]?, error: CatalogDetailsHistogramProviderError?) = (nil, nil)
 
-    func getItems(completion: @escaping ([CatalogDetailsHistogramModel]?, CatalogDetailsHistogramProviderError?) -> Void) {
+    func getItem(coinSym: String, completion: @escaping ([CatalogDetailsHistogramItemModel]?, CatalogDetailsHistogramProviderError?) -> Void) {
         getItemsWasCalled += 1
         getItemsArguments = completion
         completion(getItemsCompletionStub.result, getItemsCompletionStub.error)
@@ -83,10 +86,11 @@ private class CatalogDetailsHistogramProviderMock: CatalogDetailsHistogramProvid
 }
 
 private class CatalogDetailsHistogramPresenterMock: CatalogDetailsHistogramPresentationLogic {
-    var presentSomethingWasCalled: Int = 0
-    var presentSomethingArguments: CatalogDetailsHistogram.Something.Response?
 
-    func presentSomething(response: CatalogDetailsHistogram.Something.Response) {
+    var presentSomethingWasCalled: Int = 0
+    var presentSomethingArguments: CatalogDetailsHistogram.ShowHistogram.Response?
+
+    func presentHistory(response: YARCH.CatalogDetailsHistogram.ShowHistogram.Response) {
         presentSomethingWasCalled += 1
         presentSomethingArguments = response
     }

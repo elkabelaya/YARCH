@@ -11,7 +11,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsHistogramPresenterTests: QuickSpec {
-    override func spec() {
+    override class func spec() {
         var presenter: CatalogDetailsHistogramPresenter!
         var viewControllerMock: CatalogDetailsHistogramViewControllerMock!
 
@@ -25,7 +25,7 @@ class CatalogDetailsHistogramPresenterTests: QuickSpec {
             context("successfull empty result") {
                 it("should prepare empty view model and display it in view") {
                     // when
-                    presenter.presentSomething(response: TestData.successEmptyResponse)
+                    presenter.presentHistory(response: TestData.successEmptyResponse)
                     // then
                     expect(viewControllerMock.displaySomethingWasCalled).to(beTruthy())
                     expect { if case .emptyResult? = viewControllerMock.displaySomethingArguments?.state { return true }; return false }.to(beTrue())
@@ -35,7 +35,7 @@ class CatalogDetailsHistogramPresenterTests: QuickSpec {
             context("successfull result") {
                 it("should prepare result view model and display it in view") {
                     // when
-                    presenter.presentSomething(response: TestData.successResponse)
+                    presenter.presentHistory(response: TestData.successResponse)
                     // then
                     expect(viewControllerMock.displaySomethingWasCalled).to(beTruthy())
                     expect { if case .result(_)? = viewControllerMock.displaySomethingArguments?.state { return true }; return false }.to(beTrue())
@@ -45,7 +45,7 @@ class CatalogDetailsHistogramPresenterTests: QuickSpec {
             context("failure result") {
                 it("should prepare error view model and display it in view") {
                     // when
-                    presenter.presentSomething(response: TestData.failureResponse)
+                    presenter.presentHistory(response: TestData.failureResponse)
                     // then
                     expect(viewControllerMock.displaySomethingWasCalled).to(beTruthy())
                     expect { if case .error(_)? = viewControllerMock.displaySomethingArguments?.state { return true }; return false }.to(beTrue())
@@ -57,17 +57,23 @@ class CatalogDetailsHistogramPresenterTests: QuickSpec {
 
 extension CatalogDetailsHistogramPresenterTests {
     enum TestData {
-        static let successEmptyResponse = CatalogDetailsHistogram.Something.Response(result: .success([]))
-        static let successResponse = CatalogDetailsHistogram.Something.Response(result: .success([CatalogDetailsHistogramModel(uid: UUID().uuidString, name: "name")]))
-        static let failureResponse = CatalogDetailsHistogram.Something.Response(result: .failure(.someError(message: "some error")))
+        static let successEmptyResponse = CatalogDetailsHistogram.ShowHistogram.Response(result: .success([]))
+        static let successResponse = CatalogDetailsHistogram.ShowHistogram.Response(
+            result: .success(
+                [
+                    CatalogDetailsHistogramItemModelTests.TestData.model
+                ]
+            )
+        )
+        static let failureResponse = CatalogDetailsHistogram.ShowHistogram.Response(result: .failure(.someError(message: "some error")))
     }
 }
 
 private class CatalogDetailsHistogramViewControllerMock: CatalogDetailsHistogramDisplayLogic {
     var displaySomethingWasCalled: Int = 0
-    var displaySomethingArguments: CatalogDetailsHistogram.Something.ViewModel?
+    var displaySomethingArguments: CatalogDetailsHistogram.ShowHistogram.ViewModel?
 
-    func displaySomething(viewModel: CatalogDetailsHistogram.Something.ViewModel) {
+    func displayHistory(viewModel: YARCH.CatalogDetailsHistogram.ShowHistogram.ViewModel) {
         displaySomethingWasCalled += 1
         displaySomethingArguments = viewModel
     }

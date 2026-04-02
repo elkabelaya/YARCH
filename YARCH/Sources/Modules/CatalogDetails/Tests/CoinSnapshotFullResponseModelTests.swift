@@ -8,7 +8,7 @@ import Nimble
 @testable import YARCH
 
 class CoinSnapshotFullResponseModelTests: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("equalit operator") {
             it("should return true for same objects") {
                 expect(TestData.model == TestData.model).to(beTrue())
@@ -28,43 +28,50 @@ class CoinSnapshotFullResponseModelTests: QuickSpec {
 extension CoinSnapshotFullResponseModelTests {
     enum TestData {
         static let uid = UUID().uuidString
+        static let symbol = "SOME"
         static let title = "SomeCoin"
         static let otherTitle = "OtherCoin"
         static let imageUrlString = "http://www.example.com/image.png"
         static let website = "http://www.example.com"
         static let twitter = "http://www.twitter.com/jack"
-        static let totalSupply = "10000000"
+        static let totalSupply = 10000000.0
         static let totalMined = 8000000.0
         static let blockReward = 12.0
-
+        static let twitterModel = TwitterModel(url: twitter)
+        
         static let model = CoinSnapshotFullModel(uid: uid,
+                                                 symbol: symbol,
                                                  title: title,
                                                  imageUrlString: imageUrlString,
-                                                 website: website, twitter: twitter,
+                                                 website: website,
+                                                 twitter: twitterModel,
                                                  totalSupply: totalSupply,
                                                  totalMined: totalMined,
                                                  blockReward: blockReward)
         static let differentUidModel = CoinSnapshotFullModel(uid: UUID().uuidString,
+                                                             symbol: symbol,
                                                              title: title,
                                                              imageUrlString: imageUrlString,
                                                              website: website,
-                                                             twitter: twitter,
+                                                             twitter: twitterModel,
                                                              totalSupply: totalSupply,
                                                              totalMined: totalMined,
                                                              blockReward: blockReward)
         static let differentTitleModel = CoinSnapshotFullModel(uid: uid,
+                                                               symbol: symbol,
                                                                title: otherTitle,
                                                                imageUrlString: imageUrlString,
                                                                website: website,
-                                                               twitter: twitter,
+                                                               twitter: twitterModel,
                                                                totalSupply: totalSupply,
                                                                totalMined: totalMined,
                                                                blockReward: blockReward)
         static let constantUidModel = CoinSnapshotFullModel(uid: "1",
+                                                            symbol: symbol,
                                                             title: title,
                                                             imageUrlString: imageUrlString,
                                                             website: website,
-                                                            twitter: twitter,
+                                                            twitter: twitterModel,
                                                             totalSupply: totalSupply,
                                                             totalMined: totalMined,
                                                             blockReward: blockReward)
@@ -73,7 +80,19 @@ extension CoinSnapshotFullResponseModelTests {
         static func entitiesCollection(withCount count: Int = defaultEntitiesCollectionCount) -> [CoinSnapshotFullModel] {
             var collection: [CoinSnapshotFullModel] = []
             while collection.count < count {
-                collection.append(CoinSnapshotFullModel(uid: UUID().uuidString, title: title, imageUrlString: imageUrlString, website: website, twitter: twitter, totalSupply: totalSupply, totalMined: totalMined, blockReward: blockReward))
+                collection.append(
+                    CoinSnapshotFullModel(
+                        uid: UUID().uuidString,
+                        symbol: symbol,
+                        title: title,
+                        imageUrlString: imageUrlString,
+                        website: website,
+                        twitter: twitterModel,
+                        totalSupply: totalSupply,
+                        totalMined: totalMined,
+                        blockReward: blockReward
+                    )
+                )
             }
             return collection
         }

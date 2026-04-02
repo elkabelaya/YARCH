@@ -12,7 +12,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsProviderTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var provider: CatalogDetailsProvider!
 		var serviceMock: CatalogDetailsServiceMock!
 		var dataStoreMock: CatalogDetailsDataStoreMock!

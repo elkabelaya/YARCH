@@ -8,7 +8,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogModelTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		describe("equality operator") {
 			it("should return true for same objects") {
 				expect(TestData.model == TestData.model).to(beTrue())

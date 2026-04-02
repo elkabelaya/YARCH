@@ -9,7 +9,7 @@ import Nimble
 
 class CatalogViewModelTests: QuickSpec {
 
-    override func spec() {
+    override class func spec() {
         describe("equalit operator") {
             it("should return true for same objects") {
                 expect(TestData.viewModel == TestData.sameViewModel).to(beTrue())

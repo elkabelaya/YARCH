@@ -11,6 +11,6 @@ import Nimble
 @testable import YARCH
 
 class CatalogServiceTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 	}
 }

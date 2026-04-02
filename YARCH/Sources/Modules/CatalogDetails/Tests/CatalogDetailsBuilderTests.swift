@@ -14,7 +14,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogDetailsBuilderTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var builder: CatalogDetailsBuilder!
 
 		beforeEach {

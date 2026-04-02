@@ -9,7 +9,7 @@ import Nimble
 
 class NumberFormatterWorkerTests: QuickSpec {
 
-    override func spec() {
+    override class func spec() {
         var worker: NumberFormatterWorker!
 
         beforeEach {

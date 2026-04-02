@@ -11,7 +11,7 @@ import Nimble
 @testable import YARCH
 
 class CatalogViewControllerTests: QuickSpec {
-	override func spec() {
+	override class func spec() {
 		var viewController: CatalogViewController!
 		var interactorMock: CatalogInteractorMock!
         var tableViewDataSourceMock: CatalogTableDataSourceMock!
