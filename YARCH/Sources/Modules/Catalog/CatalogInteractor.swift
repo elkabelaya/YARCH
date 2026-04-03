@@ -16,7 +16,7 @@ class CatalogInteractor: CatalogBusinessLogic {
 
 	// MARK: Fetching
 	func fetchItems(request: Catalog.ShowItems.Request) {
-		provider.getItems { items in
+        provider.getItems(filter: request.filter) { items in
 			let result: Result<[CatalogModel]>
 			if let items = items {
 				result = .success(items)

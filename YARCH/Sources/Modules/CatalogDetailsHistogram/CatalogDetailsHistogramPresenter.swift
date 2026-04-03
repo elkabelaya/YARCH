@@ -38,6 +38,29 @@ final class CatalogDetailsHistogramPresenter: CatalogDetailsHistogramPresentatio
     }
 
     private func makeHistogramViewModel(_ model: [CatalogDetailsHistogramItemModel]) -> CatalogDetailsHistogramViewModel {
+        var (min, max): (Double?, Double?) = model.reduce(into: (nil, nil)) {partialResult, current in
+            if let result = partialResult.0 {
+                if current.low < result {
+                    partialResult.0 = current.low
+                }
+            } else {
+                partialResult.0 = current.low
+            }
+
+            if let result = partialResult.1 {
+                if current.high > result {
+                    partialResult.1 = current.high
+                }
+            } else {
+                partialResult.1 = current.high
+            }
+            print(current)
+        }
+
+        min = min ?? 0
+        max = max ?? 0
+        let padding = (max! - min!)*0.5
+
         return CatalogDetailsHistogramViewModel(
             title: "test",
             image: nil,
@@ -50,6 +73,9 @@ final class CatalogDetailsHistogramPresenter: CatalogDetailsHistogramPresentatio
                     low: item.low,
                     open: item.open
                 )
-            })
+            },
+            min: (min ?? 0) - padding,
+            max: (max ?? 0) + padding
+        )
     }
 }

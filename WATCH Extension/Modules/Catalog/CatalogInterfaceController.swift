@@ -54,6 +54,8 @@ extension CatalogInterfaceController: CatalogDisplayLogic {
         case .loading:
             statusLabel.setText("Loading...")
             fetchItems()
+        case .filtering(_):
+            statusLabel.setText("filtering...")
         case let .error(message):
             statusLabel.setText("Error: \(message)")
         case let .result(items):
@@ -62,6 +64,7 @@ extension CatalogInterfaceController: CatalogDisplayLogic {
             setupTable(items)
         case .emptyResult:
             statusLabel.setText("Empty")
+        
         }
     }
 }

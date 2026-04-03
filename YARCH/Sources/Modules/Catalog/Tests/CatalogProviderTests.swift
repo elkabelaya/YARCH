@@ -35,7 +35,7 @@ class CatalogProviderTests: QuickSpec {
 
 				it ("should request data from service") {
 					// when
-					provider.getItems { (_) in }
+                    provider.getItems(filter: nil) { (_) in }
 					// then
 					expect(serviceMock.fetchItemsDidCalled).to(equal(1))
 				}
@@ -45,7 +45,7 @@ class CatalogProviderTests: QuickSpec {
 						// given
 						serviceMock.fetchItemsCompletionStub = TestData.responseData
 						// when
-						provider.getItems { (_) in }
+                        provider.getItems(filter: nil) { (_) in }
 						// then
 						expect(dataStoreMock.models).to(equal(TestData.responseData))
 					}
@@ -54,7 +54,7 @@ class CatalogProviderTests: QuickSpec {
 						// given
 						serviceMock.fetchItemsCompletionStub = TestData.responseData
 						// when
-						provider.getItems { getItemsResult = $0 }
+                        provider.getItems(filter: nil) { getItemsResult = $0 }
 						// then
 						expect(getItemsResult).to(equal(TestData.responseData))
 					}
@@ -65,7 +65,7 @@ class CatalogProviderTests: QuickSpec {
 						// given
 						serviceMock.fetchItemsCompletionStub = nil
 						// when
-						provider.getItems { (_) in }
+                        provider.getItems(filter: nil) { (_) in }
 						// then
 						expect(dataStoreMock.models).to(beNil())
 					}
@@ -74,7 +74,7 @@ class CatalogProviderTests: QuickSpec {
 						// given
 						serviceMock.fetchItemsCompletionStub = nil
 						// when
-						provider.getItems { getItemsResult = $0 }
+                        provider.getItems(filter: nil) { getItemsResult = $0 }
 						// then
 						expect(getItemsResult).to(beNil())
 					}
@@ -87,7 +87,7 @@ class CatalogProviderTests: QuickSpec {
 				// given
 				dataStoreMock.models = TestData.responseData
 				// when
-				provider.getItems { (_) in }
+                provider.getItems(filter: nil) { (_) in }
 				// then
 				expect(serviceMock.fetchItemsDidCalled).to(equal(0))
 			}
@@ -96,7 +96,7 @@ class CatalogProviderTests: QuickSpec {
 				// given
 				dataStoreMock.models = TestData.responseData
 				// when
-				provider.getItems { getItemsResult = $0 }
+                provider.getItems(filter: nil) { getItemsResult = $0 }
 				// then
 				expect(getItemsResult).to(equal(TestData.responseData))
 			}

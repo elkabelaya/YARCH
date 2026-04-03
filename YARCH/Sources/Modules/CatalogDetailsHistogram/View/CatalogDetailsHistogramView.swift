@@ -55,7 +55,7 @@ class CatalogDetailsHistogramView: UIView {
         }
     }
 
-    private func lineChartView(data: [CatalogDetailsHistogramItemViewModel]) -> UIView {
+    private func lineChartView(data: CatalogDetailsHistogramViewModel) -> UIView {
         let view = LineChartView(data: data).toUIView()
         return view
     }
@@ -81,7 +81,7 @@ class CatalogDetailsHistogramView: UIView {
     }
 
     func updateData(model: CatalogDetailsHistogramViewModel) {
-        chartView = lineChartView(data: model.data)
+        chartView = lineChartView(data: model)
         if let chartView {
             addSubview(chartView)
             chartView.snp.makeConstraints { make in

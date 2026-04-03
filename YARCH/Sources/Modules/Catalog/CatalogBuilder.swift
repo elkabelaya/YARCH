@@ -14,7 +14,13 @@ class CatalogBuilder: ModuleBuilder {
         guard let title = title else { fatalError("You should set a title") }
 		let presenter = CatalogPresenter()
 		let interactor = CatalogInteractor(presenter: presenter)
-        let controller = CatalogViewController(title: title, interactor: interactor, loadingDataSource: LoadingTableViewDataSource(), loadingTableDelegate: LoadingTableViewDelegate())
+        let controller = CatalogViewController(
+            title: title,
+            interactor: interactor,
+            loadingDataSource: LoadingTableViewDataSource(),
+            loadingTableDelegate: LoadingTableViewDelegate(),
+            initialState: .loading
+        )
 		presenter.viewController = controller
 		return controller
 	}

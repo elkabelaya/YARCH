@@ -1,6 +1,7 @@
 //  Простой модуль отображения данных в таблице.
 
 import UIKit
+import Combine
 
 protocol CatalogDisplayLogic: AnyObject {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel)
@@ -22,39 +23,78 @@ class CatalogViewController: UIViewController {
     var tableDataSource: CatalogTableDataSource = CatalogTableDataSource()
     var tableHandler: CatalogTableDelegate = CatalogTableDelegate()
 
-    init(title: String, interactor: CatalogBusinessLogic, loadingDataSource: UITableViewDataSource, loadingTableDelegate: UITableViewDelegate, initialState: Catalog.ViewControllerState = .loading) {
+    let searchTextPublisher = PassthroughSubject<String, Never>()
+    var cancellables = Set<AnyCancellable>()
+
+    init(title: String,
+         interactor: CatalogBusinessLogic,
+         loadingDataSource: UITableViewDataSource,
+         loadingTableDelegate: UITableViewDelegate,
+         initialState: Catalog.ViewControllerState
+    ) {
         self.interactor = interactor
         self.state = initialState
         self.loadingTableDataSource = loadingDataSource
         self.loadingTableHandler = loadingTableDelegate
         super.init(nibName: nil, bundle: nil)
-        tableHandler.delegate = self
-        self.title = title
+        setup()
     }
 
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+    func setup() {
+        tableHandler.delegate = self
+        self.title = title
+        customView?.refreshActionsDelegate = self
+        setupSearchDebounce()
+    }
+
+    func setupSearchDebounce() {
+        searchTextPublisher
+            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+            .removeDuplicates()
+            .sink { [weak self] searchText in
+                self?.display(newState: .filtering(searchText))
+            }
+            .store(in: &cancellables)
+    }
+
 	// MARK: View lifecycle
 	override func loadView() {
         let view = CatalogView(frame: UIScreen.main.bounds,
                                 loadingDataSource: loadingTableDataSource,
                                 loadingDelegate: loadingTableHandler,
-                                refreshDelegate: self)
+                               refreshDelegate: self)
         self.view = view
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.hidesNavigationBarDuringPresentation = false
+        search.automaticallyShowsCancelButton = false
+        search.searchBar.placeholder = "Type something here to search"
+        navigationItem.searchController = search
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.preferredSearchBarPlacement = .stacked
+
 		display(newState: state)
 	}
 
 	// MARK: Fetching
-	func fetchItems() {
-		let request = Catalog.ShowItems.Request()
+    func fetchItems() {
+        let request = Catalog.ShowItems.Request(filter: nil)
 		interactor.fetchItems(request: request)
 	}
+
+    func filterItems(filter: String) {
+        let request = Catalog.ShowItems.Request(filter: filter)
+        interactor.fetchItems(request: request)
+    }
 }
 
 extension CatalogViewController: CatalogDisplayLogic {
@@ -65,9 +105,12 @@ extension CatalogViewController: CatalogDisplayLogic {
     func display(newState: Catalog.ViewControllerState) {
         state = newState
         switch state {
-        case .loading:
+        case let .loading:
             customView?.showLoading()
             fetchItems()
+        case let .filtering(filter):
+            // customView?.showLoading()
+            filterItems(filter: filter)
         case let .error(message):
             customView?.showError(message: message)
         case let .result(items):
@@ -90,5 +133,12 @@ extension CatalogViewController: CatalogViewControllerDelegate {
 extension CatalogViewController: CatalogErrorViewDelegate {
     func reloadButtonWasTapped() {
         display(newState: .loading)
+    }
+}
+
+extension CatalogViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        searchTextPublisher.send(text)
     }
 }

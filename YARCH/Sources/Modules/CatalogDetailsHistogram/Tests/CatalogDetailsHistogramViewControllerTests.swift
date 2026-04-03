@@ -24,9 +24,9 @@ class CatalogDetailsHistogramViewControllerTests: QuickSpec {
         }
 
         describe(".fetchHistogramInfo") {
-            it("should call method in interactor") {
+            it("should call method fetchHistory in interactor") {
                 // when
-                viewController.fetchHistogramInfo(coinSym: "EXT", )
+                viewController.fetchHistogramInfo(coinSym: TestData.symbol )
 
                 // then
                 expect(interactorMock.doSomethingWasCalled).to(equal(1))

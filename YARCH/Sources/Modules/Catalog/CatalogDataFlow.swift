@@ -5,6 +5,7 @@ enum Catalog {
 	// MARK: Use cases
 	enum ShowItems {
 		struct Request {
+            var filter: String?
 		}
 
 		struct Response {
@@ -22,6 +23,7 @@ enum Catalog {
 
 	enum ViewControllerState {
 		case loading
+        case filtering(String)
 		case result([CatalogViewModel])
         case emptyResult(title: String, subtitle: String)
         case error(message: String)

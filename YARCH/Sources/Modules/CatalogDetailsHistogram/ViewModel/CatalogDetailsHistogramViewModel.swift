@@ -21,4 +21,6 @@ struct CatalogDetailsHistogramViewModel {
     let title: String
     let image: UIImage?
     let data: [CatalogDetailsHistogramItemViewModel]
+    let min: Double
+    let max: Double
 }

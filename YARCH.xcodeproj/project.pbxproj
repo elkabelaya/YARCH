@@ -128,14 +128,14 @@
 		8F62A5DA2F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5D82F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift */; };
 		8F62A5DC2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */; };
 		8F62A5DD2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */; };
-		8F62A5E02F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */; };
-		8F62A5E12F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */; };
 		8F62A5E32F7CF163009980D1 /* LinearChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */; };
 		8F62A5E42F7CF163009980D1 /* LinearChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */; };
 		8F62A5E62F7CF1E6009980D1 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */; };
 		8F62A5E72F7CF1E6009980D1 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */; };
 		8F62A5EF2F7D5BDF009980D1 /* CatalogDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */; };
 		8F62A5F02F7D5BDF009980D1 /* CatalogDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */; };
+		8FE61E282F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE61E272F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift */; };
+		8FE61E292F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE61E272F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift */; };
 		9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */; };
 		9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0E9671DF46475CB33ABE8B /* CatalogProviderTests.swift */; };
 		A61E964033266AB0AF8E4377 /* CatalogBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */; };
@@ -345,10 +345,10 @@
 		8F62A5B42F7CDB75009980D1 /* CatalogDetailsHistogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramViewController.swift; sourceTree = "<group>"; };
 		8F62A5D82F7CE1F0009980D1 /* CatalogDetailsHistogramResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramResponseModel.swift; sourceTree = "<group>"; };
 		8F62A5DB2F7CE223009980D1 /* CatalogDetailsHistogramItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramItemModel.swift; sourceTree = "<group>"; };
-		8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramViewModel.swift; sourceTree = "<group>"; };
 		8F62A5E22F7CF15A009980D1 /* LinearChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearChartView.swift; sourceTree = "<group>"; };
 		8F62A5E52F7CF1DF009980D1 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		8F62A5EE2F7D5BDF009980D1 /* CatalogDetailContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailContentView.swift; sourceTree = "<group>"; };
+		8FE61E272F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsHistogramViewModel.swift; sourceTree = "<group>"; };
 		9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogViewControllerTests.swift; sourceTree = "<group>"; };
 		A1D5BC19BA8CE1770E3E2F59 /* CatalogDetailsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsView.swift; sourceTree = "<group>"; };
 		A86F5A3858B0832703A30526 /* Pods-YARCHTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YARCHTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -614,7 +614,7 @@
 		8F62A5DE2F7CEE7D009980D1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8F62A5DF2F7CEF37009980D1 /* CatalogDetailsHistogramViewModel.swift */,
+				8FE61E272F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1237,7 +1237,6 @@
 				B330118B1FC3017000488D77 /* ModuleBuilder.swift in Sources */,
 				3E83E1C642A78587CB7A2B75 /* CatalogBuilder.swift in Sources */,
 				457D6DF71FCB0F9300E3AD5C /* LoadingTableViewCell.swift in Sources */,
-				8F62A5E02F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */,
 				457D6E031FCB242800E3AD5C /* CatalogErrorView.swift in Sources */,
 				E41E0C4DFE9F0E3D2A7A424C /* CatalogViewController.swift in Sources */,
 				CD5FD9D2A810A3927D12248B /* CatalogInteractor.swift in Sources */,
@@ -1285,6 +1284,7 @@
 				2D82453F3F971F77F173D5A2 /* CatalogDetailsDataFlow.swift in Sources */,
 				2CD9454E1FFD1D420017CEAD /* CatalogDetailsCellViewModel.swift in Sources */,
 				8E5C4519870E9A982A356344 /* CatalogDetailsProvider.swift in Sources */,
+				8FE61E282F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift in Sources */,
 				592394107D6B55CF87D0E9EB /* CatalogDetailsDataStore.swift in Sources */,
 				C1A72D3AF6333934008F7599 /* CatalogDetailsService.swift in Sources */,
 				C6047C261008D9CE164D204D /* CatalogDetailsView.swift in Sources */,
@@ -1349,7 +1349,6 @@
 				BA8193AA20209553006731F4 /* LoadingSectionHeaderView.swift in Sources */,
 				BA8193B820209564006731F4 /* CatalogProvider.swift in Sources */,
 				BA8193B920209564006731F4 /* CatalogDataStore.swift in Sources */,
-				8F62A5E12F7CEF46009980D1 /* CatalogDetailsHistogramViewModel.swift in Sources */,
 				BA8193B42020955C006731F4 /* CatalogTableDataSource.swift in Sources */,
 				2C8F3027214E320B003BB1B6 /* CoinSnapshotFullResponseModel.swift in Sources */,
 				2C8F301F214E317C003BB1B6 /* CatalogDetailsPresenter.swift in Sources */,
@@ -1397,6 +1396,7 @@
 				BA8193AC20209553006731F4 /* LoadingTableViewDataSource.swift in Sources */,
 				BA8193B32020955C006731F4 /* CatalogTableDelegate.swift in Sources */,
 				2C8F3020214E3182003BB1B6 /* CatalogDetailsInteractor.swift in Sources */,
+				8FE61E292F7F5EC500089C52 /* CatalogDetailsHistogramViewModel.swift in Sources */,
 				BA8193A720209553006731F4 /* ModuleBuilder.swift in Sources */,
 				BA8193B720209560006731F4 /* ResponseModel.swift in Sources */,
 				BA8193C1202097E7006731F4 /* APIClient.swift in Sources */,

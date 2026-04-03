@@ -21,12 +21,19 @@ class CatalogViewControllerTests: QuickSpec {
             tableViewDataSourceMock = CatalogTableDataSourceMock()
             tableViewDelegateMock = CatalogTableDelegateMock()
 			interactorMock = CatalogInteractorMock()
-            viewController = CatalogViewController(title: TestData.title, interactor: interactorMock, loadingDataSource: LoadingTableViewDataSource(), loadingTableDelegate: LoadingTableViewDelegate())
+            viewController = CatalogViewController(
+                title: TestData.title,
+                interactor: interactorMock,
+                loadingDataSource: LoadingTableViewDataSource(),
+                loadingTableDelegate: LoadingTableViewDelegate(),
+                initialState: .loading
+            )
 		}
 
 		describe(".fetching") {
 			it("should call method in interactor") {
 				// when
+                interactorMock.fetchItemsDidCalled = 0
 				viewController.fetchItems()
 
 				// then
@@ -49,8 +56,8 @@ class CatalogViewControllerTests: QuickSpec {
                 viewController.display(newState: TestData.resultState.state)
 
                 // then
-                expect(tableViewDataSourceMock.representableViewModelsSetterDidCalled).to(beGreaterThan(1))
-                expect(tableViewDelegateMock.representableViewModelsSetterDidCalled).to(beGreaterThan(1))
+                expect(tableViewDataSourceMock.representableViewModelsSetterDidCalled).to(equal(1))
+                expect(tableViewDelegateMock.representableViewModelsSetterDidCalled).to(equal(1))
             }
         }
 	}

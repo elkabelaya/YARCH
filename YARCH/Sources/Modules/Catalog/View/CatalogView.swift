@@ -1,6 +1,11 @@
 import UIKit
 
-class CatalogView: UIView {
+class CatalogView: UIView, UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
+    let loadingView: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
+
     var tableView: UITableView
 
     lazy var emptyView = CatalogEmptyView()
@@ -17,16 +22,17 @@ class CatalogView: UIView {
          loadingDataSource: UITableViewDataSource,
          loadingDelegate: UITableViewDelegate,
          refreshDelegate: CatalogErrorViewDelegate) {
-        tableView = UITableView(delegate: loadingDelegate, dataSource: loadingDataSource)
+         tableView = UITableView(delegate: loadingDelegate, dataSource: loadingDataSource)
         super.init(frame: frame)
         refreshActionsDelegate = refreshDelegate
-        configureTableView()
+        setup()
         addSubviews()
         makeConstraints()
+    }
 
-        emptyView.isHidden = true
-        tableView.isHidden = true
-        errorView.isHidden = true
+    func setup() {
+        self.backgroundColor = .white
+        configureTableView()
     }
 
     func configureTableView() {
@@ -42,14 +48,24 @@ class CatalogView: UIView {
     }
 
     func addSubviews() {
+        addSubview(loadingView)
         addSubview(tableView)
         addSubview(emptyView)
         addSubview(errorView)
     }
 
     func makeConstraints() {
+        loadingView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+
+        tableView.tableHeaderView?.snp.makeConstraints { (make) in
+            make.width.equalTo(tableView)
+            make.height.equalTo(100)
         }
 
         emptyView.snp.makeConstraints { make in
@@ -68,7 +84,7 @@ class CatalogView: UIView {
     }
 
     func showLoading() {
-        show(view: tableView)
+        show(view: loadingView)
     }
 
     func showError(message: String) {
@@ -84,10 +100,13 @@ class CatalogView: UIView {
         subviews.forEach { $0.isHidden = (view != $0) }
     }
 
+    func show(view: UIView, view1: UIView) {
+        subviews.forEach { $0.isHidden = (view != $0 && view1 != $0) }
+    }
+
     func updateTableViewData(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         showTable()
         tableView.tableFooterView = nil
-        tableView.tableHeaderView = nil
         tableView.dataSource = dataSource
         tableView.delegate = delegate
         tableView.reloadData()

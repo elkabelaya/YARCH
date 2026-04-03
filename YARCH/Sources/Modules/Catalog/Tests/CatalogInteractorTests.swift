@@ -73,7 +73,7 @@ private class CatalogProviderMock: ProvidesCatalogItems {
 	var getItemsArguments: (([CatalogModel]?) -> Void)?
 	var getItemsCompletionStub: [CatalogModel]?
 
-	func getItems(completion: @escaping ([CatalogModel]?) -> Void) {
+    func getItems(filter: String?, completion: @escaping ([CatalogModel]?) -> Void) {
 		getItemsDidCalled += 1
 		getItemsArguments = completion
 		completion(getItemsCompletionStub)
